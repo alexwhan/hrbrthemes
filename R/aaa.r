@@ -11,7 +11,6 @@ try_require <- function(package, fun) {
 #from extrafonts
 .onAttach <- function(libname, pkgname) {
   if (.Platform$OS.type == "windows") {
-    loadfonts("win", quiet = TRUE)
-    packageStartupMessage("Registering fonts with R")
+    load_fonts_win()
   }
 }
